@@ -10,28 +10,28 @@ namespace Personajes
     {
         public PersonajeDeMagia(string nombre, int agilidad, int magia, int fuerza)
         {
-            Nombre = nombre;
-            Agilidad = agilidad;
-            Magia = magia;
-            Fuerza = fuerza;
+            this.Nombre = nombre;
+            this.Agilidad = agilidad;
+            this.Magia = magia;
+            this.Fuerza = fuerza;
         }
 
-        public PersonajeDeAgilidad(string nombre, int agilidad, int fuerza)
+        public void PersonajeDeAgilidad(string nombre, int agilidad, int fuerza)
         {
-            Nombre = nombre;
-            Agilidad = agilidad;
-            Magia = 60;
-            Fuerza = fuerza;
+            this.Nombre = nombre;
+            this.Agilidad = agilidad;
+            this.Magia = 60;
+            this.Fuerza = fuerza;
         }
 
-        public int CalcularDanio(int agilidad, int magia, int fuerza)
+        public override int CalcularDanio()
         {
-            return fuerza + agilidad + magia * 4;
+            return this.Fuerza + this.Agilidad + this.Magia * 4;
         }
 
-        public override int Atacar(string nombre)
+        public override void Atacar()
         {
-            Console.WriteLine($"{nombre} hizo {CalcularDanio()} de daño gracias a su magia.");
+            Console.WriteLine($"{this.Nombre} hizo {this.CalcularDanio()} de daño gracias a su magia.");
         }
     }
 }

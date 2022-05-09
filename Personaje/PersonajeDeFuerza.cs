@@ -11,15 +11,15 @@ namespace Personajes
     {
         public PersonajeDeFuerza(string nombre, int agilidad, int magia)
         {
-            Nombre = nombre;
-            Agilidad = agilidad;
-            Magia = magia;
-            Fuerza = 100;
+            this.Nombre = nombre;
+            this.Agilidad = agilidad;
+            this.Magia = magia;
+            this.Fuerza = 100;
         }
 
-        public int CalcularDanio(int agilidad, int magia, int fuerza)
+        public override int CalcularDanio()
         {
-            return fuerza * 3 + agilidad / 2 + magia;
+            return this.Fuerza * 3 + this.Agilidad / 2 + this.Magia / 2;
         }
 
     }

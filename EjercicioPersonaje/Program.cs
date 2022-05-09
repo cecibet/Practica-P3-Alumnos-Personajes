@@ -1,10 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Personajes;
 
 
-using Personajes;
+PersonajeDeFuerza personajeDeFuerza1 = new("Jax", 45, 15);
+PersonajeDeAgilidad personajeDeAgilidad1 = new("Jade", 75, 50, 15);
+PersonajeDeMagia personajeDeMagia1 = new("Raiden", 30, 80, 35);
 
-PersonajeDeFuerza personaje1 = new PersonajeDeFuerza();
+List<Personaje> personajes = new List<Personaje>();
+personajes.Add(personajeDeFuerza1);
+personajes.Add(personajeDeAgilidad1);    
+personajes.Add(personajeDeMagia1);
+
+Turno.Atacarse(personajes);
+
